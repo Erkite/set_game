@@ -1,6 +1,7 @@
 # Set Game
 # Peyton Wall & Prof. O
-# 2024-10-08
+# 2024-10-07 Created the SetCard and make_deck functions and made their doctest
+# 2024-10-08 Did all the other functions and finished up writing all the doctests
 
 from enum import Enum
 from random import shuffle
@@ -154,7 +155,7 @@ def is_set(card1, card2, card3):
     >>> card9 = SetCard(3, Fill.EMPTY, Color.RED, Shape.OVAL)  # Different shape
     >>> is_set(card7, card8, card9)
     False
-    (For each of the 4 traits, all 3 cards are either the same, or all 3 are different.)'''
+    '''
     for attribute in ['number', 'fill', 'color', 'shape']:
         values = {getattr(card1, attribute), getattr(card2, attribute), getattr(card3, attribute)}
         if len(values) not in [1, 3]:
